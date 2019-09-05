@@ -19,3 +19,14 @@ class UserViewSet(viewsets.ModelViewSet):
         else:
             result = User.objects.all()
         return result
+
+
+def newUser(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'contact/added.html',)
+    else:
+        form = UserForm()
+    return render(request, 'contact/new_user.html', {"form": form})
