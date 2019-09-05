@@ -1,0 +1,8 @@
+{% extends 'contact/layout.html' %}
+{% block content %}
+
+{% for user in users %}
+<li>{{ user.user_name }}<a href="user/{{ user.user_name }}/"> Detail</a> <a href="user/remove/{{ user.id }}">
+                Delete</a></li>
+{% endfor %}
+{% endblock  %}

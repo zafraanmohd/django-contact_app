@@ -1,0 +1,11 @@
+{% extends 'contact/layout.html' %}
+{% block content %}
+
+Enter Details for new user here!
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock  %}

@@ -1,0 +1,7 @@
+{% extends 'contact/layout.html' %}
+{% block content %}
+
+{% csrf_token %}
+{{ name }}
+{{ mail }}
+{% endblock  %}
