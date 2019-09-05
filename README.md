@@ -1,3 +1,5 @@
+Demo Django REST project with basic CRUD functionality
+
 Sample Data available in sqlite db
 
 Available endpoints:
